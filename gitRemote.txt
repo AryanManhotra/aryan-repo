@@ -1,0 +1,9 @@
+1.) Github account
+2.) Empty Repo
+3.) local ssystem
+       git config --global user.name "AryanManhotra"
+       git config --gloal user.email "aryanmanhotraa1300@gmail.com
+4.)git push -u origin master
+4.1.) username? -> AryanManhotra
+4.2.) password? -> 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
+
