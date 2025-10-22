@@ -1,16 +1,23 @@
 import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 
 export function Dashboard() {
   const { user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login", { replace: true });
+  };
 
   return (
     <div className="min-h-screen bg-background p-8">
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold">Admin Dashboard</h1>
-          <Button onClick={logout} variant="outline">
+          <Button onClick={handleLogout} variant="outline">
             Logout
           </Button>
         </div>

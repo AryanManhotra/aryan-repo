@@ -69,13 +69,13 @@ export function Login() {
           duration: 3000
         });
         
-        navigate("/");
+        navigate("/dashboard");
       } else {
         form.setError("root", { 
           message: "Invalid email or password. Please try again." 
         });
       }
-    } catch (error) {
+    } catch {
       form.setError("root", { 
         message: "Login failed. Please try again later." 
       });
